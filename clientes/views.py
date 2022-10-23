@@ -56,7 +56,7 @@ def editar_cliente(request, id):
 
 
 def remover_cliente(request, id):
-    cliente = cliente_service.listar_cliente_id()
+    cliente = cliente_service.listar_cliente_id(id)
     if request.method == 'POST':
         cliente_service.remover_cliente(cliente)
         return redirect('listar_clientes')
